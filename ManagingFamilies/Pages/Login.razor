@@ -4,7 +4,6 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager NavigationManager
 
-<h3>Login</h3>
 <AuthorizeView>
     <NotAuthorized>
         <div class="form-group">
@@ -36,9 +35,19 @@
         errorMessage = "";
         try {
             ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            if (username.Equals("Jane"))
+            {
+                NavigationManager.NavigateTo("/ManagerView");
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
+            }
+            
             username = "";
             password = "";
-            NavigationManager.NavigateTo("/AdultPage");
+
+
         } catch (Exception e) {
             errorMessage = e.Message;
         }

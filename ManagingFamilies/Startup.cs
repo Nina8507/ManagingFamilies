@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -18,6 +19,7 @@ using ManagingFamilies.Authentication;
 using ManagingFamilies.Data;
 using ManagingFamilies.Data.Impl;
 using ManagingFamilies.Persistance;
+using Microsoft.Extensions.FileProviders;
 
 namespace ManagingFamilies
 {
@@ -47,6 +49,8 @@ namespace ManagingFamilies
             {
                 options.AddPolicy("MustBeManager", policy =>
                     policy.RequireAuthenticatedUser().RequireClaim("Role", "Manager"));
+                options.AddPolicy("MustBeMale", policy => 
+                    policy.RequireAuthenticatedUser().RequireClaim("Role", "Analyst"));
             });
         }
 
@@ -66,7 +70,14 @@ namespace ManagingFamilies
             }
 
             app.UseHttpsRedirection();
+            
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "StaticFolder")),
+                RequestPath = "/StaticFolder"
+            });
 
             app.UseRouting();
 

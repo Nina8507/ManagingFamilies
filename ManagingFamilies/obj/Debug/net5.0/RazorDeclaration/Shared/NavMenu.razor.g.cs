@@ -90,7 +90,7 @@ using ManagingFamilies.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\const\RiderProjects\ManagingFamilies\ManagingFamilies\Shared\NavMenu.razor"
+#line 50 "C:\Users\const\RiderProjects\ManagingFamilies\ManagingFamilies\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

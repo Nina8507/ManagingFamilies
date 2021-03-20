@@ -105,7 +105,7 @@ using ManagingFamilies.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 73 "C:\Users\const\RiderProjects\ManagingFamilies\ManagingFamilies\Pages\AdultPage.razor"
+#line 76 "C:\Users\const\RiderProjects\ManagingFamilies\ManagingFamilies\Pages\AdultPage.razor"
        
     private IList<Adult> adults;
     private IList<Adult> allAdults;

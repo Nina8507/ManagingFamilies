@@ -53,16 +53,19 @@ else
                 <td>@adult.JobTitle.JobTitle</td>
                 <td>@adult.JobTitle.Salary</td>
                 
-                <td>
-                    <button @onclick="@(() => RemoveAdult(adult.Id))">
-                        <i class="oi oi-trash" style="color: red"/>
-                    </button>
-                </td>
-                <td>
-                    <button @onclick="() => EditAdult(adult.Id)">
-                        <i class="oi oi-pencil" style="color: #2efff8"></i>
-                    </button>
-                </td>
+                <AuthorizeView Policy="MustBeManager">
+                    <td>
+                        <button @onclick="@(() => RemoveAdult(adult.Id))">
+                            <i class="oi oi-trash" style="color: red"/>
+                        </button>
+                    </td>
+                    <td>
+                        <button @onclick="() => EditAdult(adult.Id)">
+                            <i class="oi oi-pencil" style="color: #2efff8"></i>
+                        </button>
+                    </td>
+                </AuthorizeView>
+                
             </tr>
         }
         </tbody>

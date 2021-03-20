@@ -98,7 +98,7 @@ using ManagingFamilies.Authentication;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "C:\Users\const\RiderProjects\ManagingFamilies\ManagingFamilies\Pages\Login.razor"
+#line 29 "C:\Users\const\RiderProjects\ManagingFamilies\ManagingFamilies\Pages\Login.razor"
        
     private string username;
     private string password;
@@ -108,9 +108,19 @@ using ManagingFamilies.Authentication;
         errorMessage = "";
         try {
             ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            if (username.Equals("Jane"))
+            {
+                NavigationManager.NavigateTo("/ManagerView");
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
+            }
+            
             username = "";
             password = "";
-            NavigationManager.NavigateTo("/AdultPage");
+
+
         } catch (Exception e) {
             errorMessage = e.Message;
         }

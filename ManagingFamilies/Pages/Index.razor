@@ -1,7 +1,10 @@
 ﻿@page "/"
+<AuthorizeView Policy="MustBeMale">
+    <h1>Hello, John!</h1>
+    
+    <h2>Welcome back.</h2>
+    
+    <img src="/StaticFolder/Images/9472721391_d5f7634f1e_c.jpg" asp-append-version="true" width="600px"/> 
+</AuthorizeView>
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?"/>

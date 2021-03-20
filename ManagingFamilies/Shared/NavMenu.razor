@@ -13,6 +13,11 @@
             </NavLink>
         </li>
         <li class="nav-item px-3">
+        <NavLink class="nav-link" href="Login">
+            <span class="oi oi-laptop" aria-hidden="true"></span> Login
+        </NavLink>
+        </li>
+        <li class="nav-item px-3">
             <NavLink class="nav-link" href="FamilyPage">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Family Page
             </NavLink>
@@ -23,21 +28,21 @@
             </NavLink>
         </li>
         <li class="nav-item px-3">
+            <NavLink class="nav-link" href="SecurityLevel">
+                <span class="oi oi-list" aria-hidden="true"></span> Security Level
+            </NavLink>
+        </li>
+        <AuthorizeView Policy="MustBeManager">
+        <li class="nav-item px-3">
             <NavLink class="nav-link" href="AddAdult">
                 <span class="oi oi-arrow-right" aria-hidden="true"></span> Add New Adult
             </NavLink>
         </li>
-         <li class="nav-item px-3">
-                    <NavLink class="nav-link" href="Security">
-                        <span class="oi oi-list" aria-hidden="true"></span> Security
-                    </NavLink>
-                </li>
-                <AuthorizeView Policy="MustBeManager">
-                            <li class="nav-item px-3">
-                                <NavLink class="nav-link" href="ManagerView">
-                                    <span class="oi oi-list" aria-hidden="true"></span> Managers view
-                                </NavLink>
-                            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="ManagerView">
+                    <span class="oi oi-list" aria-hidden="true"></span> Managers View
+                </NavLink>
+            </li>
                 </AuthorizeView>
     </ul>
 </div>
