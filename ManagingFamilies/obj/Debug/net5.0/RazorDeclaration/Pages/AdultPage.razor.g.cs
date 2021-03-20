@@ -110,17 +110,20 @@ using ManagingFamilies.Models;
     private IList<Adult> adults;
     private IList<Adult> allAdults;
     private IList<Adult> adultsToShow;
-    string filterByName = null;
+    private string? filterByName;
     
     protected override async Task OnInitializedAsync()
     {
-        adultsToShow = AdultData.GetAllAdults();
+        adults = AdultData.GetAllAdults();
+        adultsToShow = adults;
     }
 
     private void RemoveAdult(int adultId)
     {
-       // Adult adultToRemove = adults.First(a => a.Id == adultId);
-        adultsToShow.RemoveAt(adultId);
+        Adult adultToRemove = adults.First(a => a.Id == adultId);
+        AdultData.RemoveAdult(adultId);
+        adultsToShow.Remove(adultToRemove);
+        adults.Remove(adultToRemove);
     }
 
     private void EditAdult(int id)
@@ -128,8 +131,9 @@ using ManagingFamilies.Models;
         NavigationManager.NavigateTo($"EditAdult/{id}");
     }
     
-   private void FilterByName(ChangeEventArgs changeEventArgs)
+   private void Filter(ChangeEventArgs changeEventArgs)
    {
+       filterByName = null;
        try
         {
             filterByName = changeEventArgs.Value.ToString();

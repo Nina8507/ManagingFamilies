@@ -105,7 +105,7 @@ using ManagingFamilies.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 66 "C:\Users\const\RiderProjects\ManagingFamilies\ManagingFamilies\Pages\AddAdult.razor"
+#line 67 "C:\Users\const\RiderProjects\ManagingFamilies\ManagingFamilies\Pages\AddAdult.razor"
        
     private Adult adultToAdd = new Adult();
     private Job newJobToAdd = new Job(); 

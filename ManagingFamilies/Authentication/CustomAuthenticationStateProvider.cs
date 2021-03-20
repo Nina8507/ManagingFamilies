@@ -47,6 +47,7 @@ namespace ManagingFamilies.Authentication
         public void ValidateLogin(string userName, string password)
         {
             Console.WriteLine("Validating log in");
+            
             if (string.IsNullOrEmpty(userName)) throw new Exception("Enter username");
             if (string.IsNullOrEmpty(password)) throw new Exception("Enter password");
 

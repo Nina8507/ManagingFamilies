@@ -1,21 +1,6 @@
 [
   {
     "JobTitle": {
-      "JobTitle": "Business Development Manager",
-      "Salary": 71456
-    },
-    "Id": 2,
-    "FirstName": "Samara",
-    "LastName": "Humphrey",
-    "HairColor": "Black",
-    "Age": 34,
-    "Weight": 37,
-    "Height": 145,
-    "Sex": "F",
-    "EyeColor": "Brown"
-  },
-  {
-    "JobTitle": {
       "JobTitle": "Skin Care Specialist",
       "Salary": 20545
     },
@@ -251,6 +236,21 @@
     "Age": 36,
     "Weight": 64.8,
     "Height": 147,
+    "Sex": "F",
+    "EyeColor": "Brown"
+  },
+  {
+    "JobTitle": {
+      "JobTitle": "Business Development Manager",
+      "Salary": 71456
+    },
+    "Id": 2,
+    "FirstName": "Samara",
+    "LastName": "Humphrey",
+    "HairColor": "Blonde",
+    "Age": 34,
+    "Weight": 37,
+    "Height": 145,
     "Sex": "F",
     "EyeColor": "Brown"
   }

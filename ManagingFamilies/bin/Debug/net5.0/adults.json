@@ -1,36 +1,6 @@
 [
   {
     "JobTitle": {
-      "JobTitle": "Front End Web Developer",
-      "Salary": 66408
-    },
-    "Id": 1,
-    "FirstName": "Lyla",
-    "LastName": "Humphrey",
-    "HairColor": "Black",
-    "Age": 36,
-    "Weight": 64.8,
-    "Height": 147,
-    "Sex": "F",
-    "EyeColor": "Brown"
-  },
-  {
-    "JobTitle": {
-      "JobTitle": "Business Development Manager",
-      "Salary": 71456
-    },
-    "Id": 2,
-    "FirstName": "Samara",
-    "LastName": "Humphrey",
-    "HairColor": "Black",
-    "Age": 34,
-    "Weight": 37,
-    "Height": 145,
-    "Sex": "F",
-    "EyeColor": "Brown"
-  },
-  {
-    "JobTitle": {
       "JobTitle": "Skin Care Specialist",
       "Salary": 20545
     },
@@ -253,5 +223,35 @@
     "Height": 175,
     "Sex": "F",
     "EyeColor": null
+  },
+  {
+    "JobTitle": {
+      "JobTitle": "Front End Web Developer",
+      "Salary": 66408
+    },
+    "Id": 100,
+    "FirstName": "Lyla",
+    "LastName": "Humphrey",
+    "HairColor": "Black",
+    "Age": 36,
+    "Weight": 64.8,
+    "Height": 147,
+    "Sex": "F",
+    "EyeColor": "Brown"
+  },
+  {
+    "JobTitle": {
+      "JobTitle": "Business Development Manager",
+      "Salary": 71456
+    },
+    "Id": 2,
+    "FirstName": "Samara",
+    "LastName": "Humphrey",
+    "HairColor": "Blonde",
+    "Age": 34,
+    "Weight": 37,
+    "Height": 145,
+    "Sex": "F",
+    "EyeColor": "Brown"
   }
 ]

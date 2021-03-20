@@ -37,7 +37,6 @@ namespace ManagingFamilies
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
-            services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddSingleton<IFileContext, FileContext>();
             services.AddSingleton(new FileContext());
             services.AddSingleton<IFamilyData, FamilyData>();

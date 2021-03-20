@@ -110,6 +110,7 @@ using ManagingFamilies.Authentication;
             ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
             username = "";
             password = "";
+            NavigationManager.NavigateTo("/AdultPage");
         } catch (Exception e) {
             errorMessage = e.Message;
         }
@@ -121,7 +122,7 @@ using ManagingFamilies.Authentication;
         password = "";
         try {
             ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
-            NavigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo("/Login");
         } catch (Exception e) { }
     }
 
