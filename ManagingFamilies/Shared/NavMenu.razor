@@ -8,42 +8,64 @@
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+            <NavLink class="nav-link" href="Login">
+                <span class="oi oi-laptop" aria-hidden="true"></span> Login
             </NavLink>
         </li>
-        <li class="nav-item px-3">
-        <NavLink class="nav-link" href="Login">
-            <span class="oi oi-laptop" aria-hidden="true"></span> Login
-        </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="FamilyPage">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Family Page
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="AdultPage">
-                <span class="oi oi-arrow-right" aria-hidden="true"></span> Adult Page
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="SecurityLevel">
-                <span class="oi oi-list" aria-hidden="true"></span> Security Level
-            </NavLink>
-        </li>
-        <AuthorizeView Policy="MustBeManager">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="AddAdult">
-                <span class="oi oi-arrow-right" aria-hidden="true"></span> Add New Adult
-            </NavLink>
-        </li>
+        <AuthorizeView Policy="MustBeMale">
             <li class="nav-item px-3">
-                <NavLink class="nav-link" href="ManagerView">
-                    <span class="oi oi-list" aria-hidden="true"></span> Managers View
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Home
                 </NavLink>
             </li>
-                </AuthorizeView>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="FamilyPage">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> Family Page
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="AdultPage">
+                    <span class="oi oi-arrow-right" aria-hidden="true"></span> Adult Page
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="SecurityLevel">
+                            <span class="oi oi-list" aria-hidden="true"></span> Security Level
+                        </NavLink>
+                    </li>
+        </AuthorizeView>
+        <AuthorizeView Policy="MustBeManager">
+             <li class="nav-item px-3">
+                     <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                         <span class="oi oi-home" aria-hidden="true"></span> Home
+                         </NavLink>
+                        </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="FamilyPage">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> Family Page
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="AdultPage">
+                            <span class="oi oi-arrow-right" aria-hidden="true"></span> Adult Page
+                        </NavLink>
+                    </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="AddAdult">
+                    <span class="oi oi-arrow-right" aria-hidden="true"></span> Add New Adult
+                </NavLink>
+            </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="ManagerView">
+                            <span class="oi oi-list" aria-hidden="true"></span> Managers View
+                        </NavLink>
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" href="SecurityLevel">
+                            <span class="oi oi-list" aria-hidden="true"></span> Security Level
+                        </NavLink>
+                    </li>
+        </AuthorizeView>
     </ul>
 </div>
 
